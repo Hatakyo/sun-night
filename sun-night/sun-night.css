@@ -1,0 +1,79 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --scale: 100px;
+}
+
+.body {
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 15%;
+    width: 80%;
+    flex-direction: column;
+    @media (min-width: 500px) {
+        width: 50%;
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+.content {
+    text-align: justify;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.btn {
+    margin: 50px 43%;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--scale);
+    height: calc( var(--scale) / 2);
+    background-color: #000;
+    border-radius: calc( var(--scale) / 4);
+    cursor: pointer;
+}
+
+.ball {
+    position: absolute;
+    width: calc( var(--scale) / 2);
+    height: calc( var(--scale) / 2);
+    background-color: grey;
+    border-radius: 50%;
+    border: 3px solid black;
+    transition: all 1.1s ease;
+}
+
+.scenary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px 4px 10px;
+}
+
+.moon,
+.sun {
+    color: yellow;
+    font-size: calc( var(--scale) / 3);
+}
